@@ -8,6 +8,7 @@ gem 'active_model_serializers'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'awesome_print'
 end
 
 group :development do

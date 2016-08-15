@@ -46,6 +46,9 @@ class BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:title, :price, :author_id, :publisher_id, :publisher_type)
+      input = ActiveModelSerializers::Deserialization.jsonapi_parse(params, polymorphic: [:publisher])
+      input[:publisher_type] = input[:publisher_type].singularize.capitalize
+      input
+      # params.require(:book).permit(:title, :price, :author_id, :publisher_id, :publisher_type)
     end
 end
