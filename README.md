@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Rails API I built to feed data to the [bookstore app](https://github.com/kiramclean/bookstore) I built to learn about ember js.
 
-Things you may want to cover:
+It requires `ruby 2.3.1`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*To run*:
+- clone the repo and run `bin/setup`
+- launch the server with `rails s`
+- seed the database with `rails db:seed`
